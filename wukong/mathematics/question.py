@@ -28,12 +28,28 @@ class Question:
     
     def generate_questions(self, cnt = 10,level = 1, algorithm = '+'):
 
-        digit = (1, 10)
+        digit = (0, 10)
 
         if level == 1:
             pass
         elif level == 2:
-            digit = (1, 20)
+            digit = (11, 20)
+        elif level == 3:
+            digit = (21, 30)
+        elif level == 4:
+            digit = (31, 40)
+        elif level == 5:
+            digit = (41, 50)
+        elif level == 6:
+            digit = (51, 60)
+        elif level == 7:
+            digit = (61, 70)
+        elif level == 8:
+            digit = (71, 80)
+        elif level == 9:
+            digit = (81, 90)
+        elif level == 10:
+            digit = (91, 100)     
         else:
             print('Wrong position..')
 
