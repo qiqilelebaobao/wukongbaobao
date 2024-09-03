@@ -32,5 +32,11 @@ $ pip3 install -i https://mirrors.tencent.com/pypi/simple/ --upgrade python-docx
 ## 使用说明 Instructions
 
 ```shell
-$ python3 exam.py [-h] [--cnt CNT] [--level {1,2,3,4,5,6}]
+$ python3 exam.py [-h] [--cnt CNT] [--level {1,2,3,4,5,6,7,8,9,10}]
 ```
+默认在ouput文件夹生成word文件，可以打印测验。
+
+level 1 对应 0，10以间的算法
+level 2 对应 11，20之间的算法
+...
+以此类推，总共10个等级。
