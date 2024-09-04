@@ -9,24 +9,24 @@ class Printer:
         self.output_name = ''
 
     @staticmethod
-    def gen_txt_text_from_question(q):
+    def gen_txt_text_from_question(qs):
         page_line = 35
         outer = '\n'
-        if (l:=len(q)) >= page_line:
-            for i, e in enumerate(q):
+        if (l:=len(qs)) >= page_line:
+            for i, q in enumerate(qs):
                 if i % 2 == 0:
-                    outer += f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} = \t\t\t\t'
+                    outer += f'{q}\t\t\t\t'
                 else:
-                    outer += f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} = \n\n\n'
+                    outer += f'{q}\n\n\n'
         else:
-            for i, e in enumerate(q):
-                outer += f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} = \n\n\n'
+            for i, q in enumerate(qs):
+                outer += f'{q}\n\n\n'
         return outer
 
-    def txt_output(self, q):
+    def txt_output(self, qs):
         self.output_name = f'output/plus_{datetime.now().strftime("%y%m%d_%H%M%S")}.txt'
         with open(self.output_name, 'w') as f:
-            print(Printer.gen_txt_text_from_question(q), file = f)
+            print(Printer.gen_txt_text_from_question(qs), file = f)
 
     @staticmethod
     def set_head(head, text):
@@ -47,32 +47,35 @@ class Printer:
         # run.font.bold = True
 
     @staticmethod
-    def gen_doc_para_text_from_question(q):
+    def gen_doc_para_text_from_question(qs):
         outer = ''
-        for i, e in enumerate(q):
+        for i, q in enumerate(qs):
             if i % 2 == 0:
-                outer += f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} = \t\t\t\t'
+                if len(q) < 15:
+                    outer += f'{q}\t\t\t\t'
+                else:
+                    outer += f'{q}\n'
             else:
-                outer += f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} = \n'
+                outer += f'{q}\n'
         return outer
 
-    def doc_output(self, q):
+    def doc_output(self, qs):
         self.document = Document()
         document = self.document
         
         h = document.add_heading('', 0)
-        Printer.set_head(h, u'数学测试')
+        Printer.set_head(h, '数学测试')
         
         p = document.add_paragraph()
-        Printer.set_graph(p, Printer.gen_doc_para_text_from_question(q))
+        Printer.set_graph(p, Printer.gen_doc_para_text_from_question(qs))
 
         self.output_name = f'output/plus_{datetime.now().strftime("%y%m%d_%H%M%S")}.docx'
         document.save(self.output_name)
 
-    def output(self, q, formatt='txt') -> None:
+    def output(self, qs, formatt='txt') -> None:
         if formatt == 'txt':
-            return self.txt_output(q)
+            return self.txt_output(qs)
         elif formatt == 'doc' or formatt == 'docx':
-            return self.doc_output(q)
+            return self.doc_output(qs)
         else:
             print('wrong position...')

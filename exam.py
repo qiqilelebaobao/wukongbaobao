@@ -7,13 +7,13 @@ from wukong.conf.arg import init_arg
 
 def main():
 
-    cnt, level = init_arg()
+    level, basic_cnt, open_cnt, algorithm = init_arg()
 
     m = Question()
-    q = m.generate_questions(cnt, level)
+    qs = m.generate_questions(level, basic_cnt, open_cnt, algorithm)
 
     p = Printer()
-    p.output(q, 'docx')
+    p.output(qs, 'docx')
 
 if __name__ == '__main__':
     main()
