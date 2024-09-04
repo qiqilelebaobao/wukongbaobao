@@ -51,7 +51,7 @@ class Question:
         elif level == 9:
             digit = (81, 90)
         elif level == 10:
-            digit = (91, 100)     
+            digit = (91, 100)
         else:
             print('Wrong position..')
 
