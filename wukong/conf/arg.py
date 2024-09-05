@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 def init_arg():
     '''parse parameter from command line.'''
@@ -17,5 +18,6 @@ def init_arg():
 
     if args.basic_cnt < 0 or args.open_cnt < 0:
         print('Count shall be positive.')
+        sys.exit(-1)
 
     return args.level, args.basic_cnt, args.open_cnt, args.algorithm
