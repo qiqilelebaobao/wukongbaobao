@@ -65,8 +65,8 @@ class Question:
         self.digits_list = list(self.digits)
 
     @staticmethod
-    def generate_open_question(i, e):
-        context = (f'{i + 1}. 今天上午家里收到 {e[0]} 个快递，下午收到 {e[2]} 个快递，总共收到(   ) 个快递。', 
+    def generate_open_question(i, e, algorithm):
+        plus_context = (f'{i + 1}. 今天上午家里收到 {e[0]} 个快递，下午收到 {e[2]} 个快递，总共收到(   ) 个快递。', 
                    f'{i + 1}. 今天读了 {e[0]} 本绘本，昨天读了 {e[2]} 本绘本，总共读了(   ) 本绘本。',
                    f'{i + 1}. 弟弟今年 {e[0]} 岁， {e[2]} 年后，他是(   ) 岁。',
                    f'{i + 1}. 幼儿园有 {e[0]} 个小朋友在玩游戏，这个时候有 {e[2]} 个小朋友一起加入了游戏，现在有(   ) 个小朋友在玩游戏。',
@@ -75,12 +75,27 @@ class Question:
                    f'{i + 1}. 动物园里有 {e[0]} 只公鸭，还有 {e[2]} 只母鸭，动物园一共 有(   ) 只鸭子。',
                    f'{i + 1}. 爸爸在排队买票，爸爸排在队尾，前面有 {e[0]} 个人，这一队共有(   ) 人。',
                    f'{i + 1}. 妈妈在排队买票，妈妈排在队首，后面有 {e[0]} 个人，这一队共有(   ) 人。',
+                   f'{i + 1}. 奥特曼打败了 {e[0]} 只怪兽，使用技能后又打败了 {e[2]} 只怪兽，总共打败了 (   ) 只怪兽。',
+                   f'{i + 1}. 小外公家门口种了两排白菜，其中一排中了 {e[0]} 颗，另一排中了 {e[2]} 颗，小外公家门口总共种了 (   ) 颗白菜。',
+                   f'{i + 1}. 我上个月买了 {e[0]} 个棒棒糖，这个月又买了 {e[2]} 个棒棒糖，两个月总计买了 (   ) 个棒棒糖。',
+                   )
+        
+        minus_context = (f'{i + 1}. 妈妈让我去楼下小卖部买一瓶酱油， 酱油 {e[2]} 块钱，我给了小卖部阿姨 {e[0]} 块钱，她要找我 (   ) 块钱。', 
+                   f'{i + 1}. 星期六我和爸爸妈妈去超市买了 {e[2]} 瓶酸奶，我们已经喝了 {e[0]} 瓶酸奶，还剩下 (   ) 瓶酸奶。',
+                   f'{i + 1}. 公园树上有 {e[2]} 只小鸟，飞走了 {e[0]} 只小鸟，树上还有 (   ) 只小鸟。',
+                   f'{i + 1}. 家里有 {e[2]} 个评估，外婆吃了 {e[0]} 个苹果，还有 (   ) 个苹果。',
                    )
 
-        return random.choice(context)
+        if algorithm == '+':
+            return random.choice(plus_context)
+        elif algorithm == '-':
+            return random.choice(minus_context)
+        else:
+            print('wrong position.') 
+            return 
 
     @staticmethod
-    def generate_basic_question(i, e):
+    def generate_basic_question(i, e, algorithm):
         question = f'{i + 1}.\t{e[0]:^3}{e[1]}{e[2]:^4} ='
         return question
 
@@ -91,9 +106,9 @@ class Question:
         self.generate_digits(basic_cnt + open_cnt, level, algorithm)
 
         for i in range(basic_cnt):
-            self.questions.append(Question.generate_basic_question(i, self.digits_list[i]))
+            self.questions.append(Question.generate_basic_question(i, self.digits_list[i], algorithm))
         
         for i in range(basic_cnt, total):
-            self.questions.append(Question.generate_open_question(i, self.digits_list[i]))
+            self.questions.append(Question.generate_open_question(i, self.digits_list[i], algorithm))
 
         return self.questions
