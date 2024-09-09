@@ -1,6 +1,6 @@
 [project]
 name = "wukongbaobao"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="qiqilelebaobao", email="qiqilelebaobao@163.com" },
 ]
@@ -12,7 +12,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  "python-docx",
+]
+
+keywords = ["education", "math", "learn", "kids-learn", "kids-education"]
 
 [project.urls]
 Homepage = "https://github.com/qiqilelebaobao/wukong"
 Issues = "https://github.com/qiqilelebaobao/wukong/issues"
+Repository = "https://github.com/qiqilelebaobao/wukong"
