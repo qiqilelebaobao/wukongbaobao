@@ -1,8 +1,11 @@
 # Wukong
 
 Wukong 是一个帮助家长灵活生成幼儿考试题的程序。工具使用 Python 编写。
+* https://github.com/qiqilelebaobao/wukong
 
 Wukong is a program that helps parents flexibly generate test questions for their children. The tool is written in Python.
+* https://github.com/qiqilelebaobao/wukong
+
 
 主要功能包括：
 * 通过算法按需生成数学试题
@@ -26,13 +29,14 @@ Main functions include:
 Python3 is required
 
 ```shell
-$ pip3 install -i https://mirrors.tencent.com/pypi/simple/ --upgrade python-docx
+$ pip3 install -i --upgrade python-docx
 ```
 
 ## 使用说明 Instructions
 
 ```shell
-$ python3 exam.py [-h] [--level {1,2,3,4,5,6,7,8,9,10}] [--basic_cnt BASIC_CNT] [--open_cnt OPEN_CNT] [--algorithm {+,-}]
+$ pip3 install wukongbaobao
+$ python3 -m wukong.exam [-h] [--level {1,2,3,4,5,6,7,8,9,10}] [--basic_cnt BASIC_CNT] [--open_cnt OPEN_CNT] [--algorithm {+,-}]
 ```
 默认在ouput文件夹生成word文件，可以打印测验。  
 

@@ -4,7 +4,7 @@ import sys
 def init_arg():
     '''parse parameter from command line.'''
     
-    parser = argparse.ArgumentParser(prog='python3 exam.py', description='This is a exam program for student.', epilog='Enjoy the exam. :) ')
+    parser = argparse.ArgumentParser(prog='python3 -m wukong.exam', description='This is a exam program for student.', epilog='Enjoy the exam. :) ')
 
     parser.add_argument('--level', '-l', help='level', default=1, type=int, choices=range(1, 10))
     parser.add_argument('--basic_cnt', '-bc', help='basic question count', default=25, type=int)
