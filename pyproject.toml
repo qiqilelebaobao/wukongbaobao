@@ -1,10 +1,10 @@
 [project]
 name = "wukongbaobao"
-version = "1.0.3"
+version = "1.0.4"
 authors = [
   { name="qiqilelebaobao", email="qiqilelebaobao@163.com" },
 ]
-description = "Wukong is a program that helps parents flexibly generate test questions for their children. The tool is written in Python."
+description = "Wukongbaobao is a program that helps parents flexibly generate test questions for their children. The tool is written in Python."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -19,6 +19,6 @@ dependencies = [
 keywords = ["education", "math", "learn", "kids-learn", "kids-education"]
 
 [project.urls]
-Homepage = "https://github.com/qiqilelebaobao/wukong"
-Issues = "https://github.com/qiqilelebaobao/wukong/issues"
-Repository = "https://github.com/qiqilelebaobao/wukong"
+Homepage = "https://github.com/qiqilelebaobao/wukongbaobao"
+Issues = "https://github.com/qiqilelebaobao/wukongbaobao/issues"
+Repository = "https://github.com/qiqilelebaobao/wukongbaobao"
