@@ -1,9 +1,9 @@
-# Wukong
+# Wukongbaobao
 
-Wukong 是一个帮助家长灵活生成幼儿考试题的程序。工具使用 Python 编写。
+Wukongbaobao 是一个帮助家长灵活生成幼儿考试题的程序。工具使用 Python 编写。
 * https://github.com/qiqilelebaobao/wukong
 
-Wukong is a program that helps parents flexibly generate test questions for their children. The tool is written in Python.
+Wukongbaobao is a program that helps parents flexibly generate test questions for their children. The tool is written in Python.
 * https://github.com/qiqilelebaobao/wukong
 
 
@@ -29,7 +29,7 @@ Main functions include:
 Python3 is required
 
 ```shell
-$ pip3 install -i --upgrade python-docx
+$ pip3 install --upgrade python-docx
 $ pip3 install wukongbaobao
 ```
 
