@@ -11,8 +11,12 @@ readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
+    "Topic :: Education",
+    "Topic :: Software Development",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English"
 ]
 dependencies = [
   "python-docx",
