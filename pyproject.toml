@@ -4,11 +4,9 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "wukongbaobao"
-version = "1.0.5"
 authors = [
   { name="qiqilelebaobao", email="qiqilelebaobao@163.com" },
 ]
-description = "Wukongbaobao is a program that helps parents flexibly generate test questions for their children. The tool is written in Python."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -19,6 +17,8 @@ classifiers = [
 dependencies = [
   "python-docx",
 ]
+
+dynamic = ["version", "description"]
 
 keywords = ["education", "math", "learn", "kids-learn", "kids-education"]
 
