@@ -166,3 +166,4 @@ cython_debug/
 *.docx
 test.py
 
+*.code-workspace
