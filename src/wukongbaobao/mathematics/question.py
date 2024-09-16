@@ -19,7 +19,7 @@ class Question:
         return f'{self.name=} {self.stage=}'
     
     @staticmethod
-    def generate_digit( algorithm = '+', min_digit = 1, max_digit = 10):
+    def generate_digit(algorithm = '+', min_digit = 1, max_digit = 10):
 
         digits = random.randint(min_digit, max_digit), algorithm, random.randint(min_digit, max_digit)
         if algorithm == '-':

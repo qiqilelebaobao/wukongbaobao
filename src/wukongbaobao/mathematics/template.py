@@ -20,6 +20,7 @@ plus_level_1_context = (
         '{index}. 公园树上有 {augend} 只小鸟，树上又飞来了 {addend} 只小鸟，树上现在总共有 (   ) 只小鸟。',
         '{index}. 家里有 {augend} 个苹果，外婆超市又买了 {addend} 个苹果，总共 (   ) 个苹果。',
         '{index}. 1号羊圈里有 {augend} 只小羊，2号羊圈有 {addend} 只小羊， 两个羊圈总共 (   ) 只小羊。',
+        '{index}. 比 {augend} 大 {addend} 的数是 (   ) 。',
 
         '{index}. {augend} 和 {addend} 的和是 (   )。',
     )
@@ -45,6 +46,7 @@ minus_level_1_context = (
         '{index}. 公园树上有 {minuend} 只小鸟，飞走了 {subtrahend} 只小鸟，树上还有 (   ) 只小鸟。',
         '{index}. 家里有 {minuend} 个苹果，外婆吃了 {subtrahend} 个苹果，还有 (   ) 个苹果。',
         '{index}. 羊圈里有 {minuend} 只小羊， 跑出了 {subtrahend} 只，羊圈里还剩下 (   ) 只小羊。',
+        '{index}. 比 {minuend} 小 {subtrahend} 的数是 （   ） 。',
 
         '{index}. {minuend} 比 {subtrahend} 大 (   )。',
         '{index}. {subtrahend} 比 {minuend} 小 (   )。',
