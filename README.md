@@ -36,7 +36,7 @@ $ pip3 install wukongbaobao
 ## 使用说明 Instructions
 
 ```shell
-$ python3 -m wukongbaobao.exam [-h] [--level {1,2,3,4,5,6,7,8,9,10}] [--basic_cnt BASIC_CNT] [--open_cnt OPEN_CNT] [--algorithm {+,-}]
+$ python3 -m wukongbaobao [-h] [--level {1,2,3,4,5,6,7,8,9,10}] [--basic_cnt BASIC_CNT] [--open_cnt OPEN_CNT] [--algorithm {+,-}]
 ```
 默认在ouput文件夹生成word文件，可以打印测验。  
 
