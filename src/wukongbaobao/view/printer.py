@@ -39,7 +39,7 @@ class Printer:
     
     @staticmethod
     def set_graph(p, text):
-        p.paragraph_format.line_spacing = 2.5
+        p.paragraph_format.line_spacing = 2.0
         run = p.add_run(text)
         run.font.size = Pt(16)
         run.font.name = 'Times New Roman'
