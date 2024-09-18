@@ -64,7 +64,7 @@ class Printer:
         document = self.document
         
         h = document.add_heading('', 0)
-        Printer.set_head(h, '数学测试')
+        Printer.set_head(h, '数学游戏')
         
         p = document.add_paragraph()
         Printer.set_graph(p, Printer.gen_doc_para_text_from_question(qs))
