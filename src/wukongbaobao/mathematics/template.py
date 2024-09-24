@@ -50,4 +50,5 @@ minus_level_1_context = (
 
         '{index}. {minuend} 比 {subtrahend} 大 (   )。',
         '{index}. {subtrahend} 比 {minuend} 小 (   )。',
+        '{index}. 在一局奥运会乒乓球比赛中，球员A得分 {minuend} 分，球员B得分 {subtrahend} 分， 那么球员A比B领先 (   ) 分。',
     )
