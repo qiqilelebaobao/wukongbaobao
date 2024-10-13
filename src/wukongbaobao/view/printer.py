@@ -27,6 +27,8 @@ class Printer:
         self.output_name = f'output/plus_{datetime.now().strftime("%y%m%d_%H%M%S")}.txt'
         with open(self.output_name, 'w') as f:
             print(Printer.gen_txt_text_from_question(qs), file = f)
+        
+        return self.output_name
 
     @staticmethod
     def set_head(head, text):
@@ -71,6 +73,8 @@ class Printer:
 
         self.output_name = f'output/plus_{datetime.now().strftime("%y%m%d_%H%M%S")}.docx'
         document.save(self.output_name)
+
+        return self.output_name
 
     def output(self, qs, formatt='txt') -> None:
         if formatt == 'txt':

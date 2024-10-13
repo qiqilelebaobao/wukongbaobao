@@ -78,7 +78,7 @@ class Question:
             return random.choice(minus_context)
         else:
             print('wrong position.') 
-            return 
+            return
 
     @staticmethod
     def generate_basic_question(i, e, algorithm):

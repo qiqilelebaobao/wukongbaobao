@@ -2,23 +2,12 @@ import os
 import sys
 
 
-if not __package__:
-    # Make CLI runnable from source tree with
-    #    python src/package
+from wukongbaobao.mathematics.question import Question
+from wukongbaobao.view.printer import Printer
+from wukongbaobao.conf.arg import init_arg
+from wukongbaobao.conf.output import init_output_dir
 
-    from mathematics.question import Question
-    from view.printer import Printer
-    from conf.arg import init_arg
-    from conf.output import init_output_dir
 
-    package_source_path = os.path.dirname(os.path.dirname(__file__))
-    sys.path.insert(0, package_source_path)
-
-else:
-    from .mathematics.question import Question
-    from .view.printer import Printer
-    from .conf.arg import init_arg
-    from .conf.output import init_output_dir
 
 if __name__ == '__main__':
 
@@ -32,6 +21,14 @@ if __name__ == '__main__':
         qs = m.generate_questions(level, basic_cnt, open_cnt, algorithm)
 
         p = Printer()
-        p.output(qs, 'docx')
+        name = p.output(qs, 'docx')
+        
+        feedback_template = f'''
+    Successfully generated "{name}" math tests, including:
+    The level is {level}, basic question {basic_cnt}, open questions {open_cnt}.
+    Please enjoy it.
+    '''
+
+        print(feedback_template)
 
     main()
