@@ -24,7 +24,7 @@ if __name__ == '__main__':
         name = p.output(qs, 'docx')
         
         feedback_template = f'''
-    Successfully generated "{name}" math tests, including:
+    Successfully generated "{name}" math tests:
     The level is {level}, basic question {basic_cnt}, open questions {open_cnt}.
     Please enjoy it.
     '''
