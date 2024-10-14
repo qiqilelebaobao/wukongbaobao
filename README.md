@@ -40,7 +40,7 @@ $ python3 -m wukongbaobao [-h] [--level {1,2,3,4}] [--basic_cnt BASIC_CNT] [--op
 ```
 默认在ouput文件夹生成word文件，可以打印测验。  
 
-level 1 对应 [0，10] 区间的算法  
-level 2 对应 [11，30] 区间的算法  
+level 1 对应 [0, 10] 区间的算法  
+level 2 对应 [11, 30] 区间的算法  
 level 3 对应 [31, 60] 区间的算法  
 level 4 对应 [61, 100] 区间的算法  
