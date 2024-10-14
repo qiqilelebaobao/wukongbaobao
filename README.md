@@ -25,11 +25,10 @@ Main functions include:
 
 ## 安装指南 Installation Guide
 
-需要 Python3 环境
+需要 Python3 环境  
 Python3 is required
 
 ```shell
-$ pip3 install --upgrade python-docx
 $ pip3 install wukongbaobao
 ```
 
