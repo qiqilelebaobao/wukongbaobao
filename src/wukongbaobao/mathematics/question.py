@@ -37,23 +37,11 @@ class Question:
         if level == 1:
             pass
         elif level == 2:
-            digit = (11, 20)
+            digit = (11, 30)
         elif level == 3:
-            digit = (21, 30)
+            digit = (31, 60)
         elif level == 4:
-            digit = (31, 40)
-        elif level == 5:
-            digit = (41, 50)
-        elif level == 6:
-            digit = (51, 60)
-        elif level == 7:
-            digit = (61, 70)
-        elif level == 8:
-            digit = (71, 80)
-        elif level == 9:
-            digit = (81, 90)
-        elif level == 10:
-            digit = (91, 100)
+            digit = (61, 100)
         else:
             print('Wrong position..')
 

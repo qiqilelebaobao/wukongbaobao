@@ -8,7 +8,6 @@ from wukongbaobao.conf.arg import init_arg
 from wukongbaobao.conf.output import init_output_dir
 
 
-
 if __name__ == '__main__':
 
     def main():

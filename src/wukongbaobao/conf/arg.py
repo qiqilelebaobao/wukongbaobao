@@ -4,9 +4,9 @@ import sys
 def init_arg():
     '''parse parameter from command line.'''
     
-    parser = argparse.ArgumentParser(prog='python3 -m wukong.exam', description='This is a exam program for student.', epilog='Enjoy the exam. :) ')
+    parser = argparse.ArgumentParser(prog='python3 -m wukong.exam', description='This is a test program for kids.', epilog='Enjoy the test. :) ')
 
-    parser.add_argument('--level', '-l', help='level', default=1, type=int, choices=range(1, 10))
+    parser.add_argument('--level', '-l', help='level', default=1, type=int, choices=range(1, 5))
     parser.add_argument('--basic_cnt', '-bc', help='basic question count', default=25, type=int)
     parser.add_argument('--open_cnt', '-oc', help='open question count', default=0, type=int)
     parser.add_argument('--algorithm', '-a', help='algorithm', default='+', choices=['+', '-'])
