@@ -31,3 +31,6 @@ keywords = ["education", "math", "learn", "kids-learn", "kids-education"]
 Homepage = "https://github.com/qiqilelebaobao/wukongbaobao"
 Issues = "https://github.com/qiqilelebaobao/wukongbaobao/issues"
 Repository = "https://github.com/qiqilelebaobao/wukongbaobao"
+
+[project.scripts]
+wk = "wukongbaobao.__main__:main"
